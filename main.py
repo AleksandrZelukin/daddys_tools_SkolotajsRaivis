@@ -5,8 +5,8 @@
 # from gevent.pywsgi import WSGIServer
 
 from flask import Flask, flash, redirect, render_template, request, session, url_for
-from flask_session import Session
-from flask_compress import Compress
+# from flask_session import Session
+# from flask_compress import Compress
 from random import sample
 from views import index_views, admin_views, product_views, auth_views, custom_views, cart_views, order_views
 import db_conn
@@ -20,8 +20,8 @@ app.register_error_handler(404, custom_views.page_not_found)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 app.debug = True
 
-compress = Compress()
-compress.init_app(app)
+# compress = Compress()
+# compress.init_app(app)
 
 # Ensure templates are auto-reloaded
 #app.config["TEMPLATES_AUTO_RELOAD"] = True
