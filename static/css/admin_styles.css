@@ -1,0 +1,30 @@
+@media only screen and (min-width: 992px) {
+    .nav > .nav-item {
+      width: auto !important;
+    }
+    input {
+      width: 200px;
+    }
+  }
+
+.table>:not(:first-child) {
+  border-top-width: 1px;
+  border-color: inherit;
+}
+
+.table>:not(:first-child) > td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#admin-actions button {
+  width: 100%;
+}
+
+#admin-actions button {
+  margin-top: 10px;
+}
+
+p {
+  margin: 0px;
+}

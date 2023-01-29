@@ -1,0 +1,33 @@
+#productsBannerList * {
+    text-decoration: none;
+}
+
+.main-content > #banner {
+    margin-top: 10px;
+}
+
+#banner {
+    width: 100%;
+}
+
+#productsBannerList > li {
+    display: inline-block;
+}
+
+.bannerProductImg {
+    width: 100%;
+}
+
+.bannerProductDiv {
+    width: 250px;
+    margin: 30px;
+}
+
+.oldPriceTag {
+    text-decoration: line-through !important;
+}
+
+.newPriceTag {
+    color: red;
+    font-weight: bold;
+}

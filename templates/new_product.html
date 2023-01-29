@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Product
+{% endblock %}
+
+{% block head_inners %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin_styles.css') }}">
+    <script defer src="{{ url_for('static', filename='js/saveProduct.js') }}"></script>
+{% endblock %}
+
+{% block secondary_content %}
+<div id="admin-actions">
+    <a href="/admin"><button class='btn btn-primary'>View data</button></a>
+    <a href="/admin/new_product"><button class='btn btn-primary'>Add product</button></a>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div id="container">
+        <form action="/admin/new_product" method="POST" enctype="multipart/form-data">
+            <p style="margin-top: 10px;">Brand</p>
+            <input required id="product-brand" type="text" class="form-control" name="brand"></input>
+            <p>Model</p>
+            <input required id="product-model" type="text" class="form-control" name="model"></input>
+            <p>Description</p>
+            <input required id="product-description" type="text" class="form-control" name="description"></input>
+            <p>Category</p>
+            <select required id="product-category" class="form-select" name="category">
+            {% for category in categories %}
+                <option value="{{ category[0] }}">{{ category[0] }}</option>
+            {% endfor %}
+            </select>
+            <p>Price</p>
+            <input required id="product-price" type="text" class="form-control" name="price"></input>
+            <p>Image file</p>
+            <input required id="product-image" type="file" class="form-control" name="image"></input><br>
+            <input type="submit" style="width: 150px;" class="btn btn-primary" value="Save"></input>
+        </form>
+    </div>
+{% endblock %}
