@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "/Users/zelukin/Documents/GitHub/daddys_tools_SkolotajsRaivis",
+			"problemMatcher": [],
+			"label": "Live Preview: Запустить сервер"
+		}
+	]
+}

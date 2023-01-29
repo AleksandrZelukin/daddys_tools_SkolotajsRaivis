@@ -1,8 +1,8 @@
-from gevent import monkey
+# from gevent import monkey
 
-monkey.patch_all()
+# monkey.patch_all()
 
-from gevent.pywsgi import WSGIServer
+# from gevent.pywsgi import WSGIServer
 
 from flask import Flask, flash, redirect, render_template, request, session, url_for
 from flask_session import Session
@@ -72,7 +72,7 @@ def after_request(response):
     return response
 '''
 
-http_server = WSGIServer(('0.0.0.0', 8080), app)
-http_server.serve_forever()
+# http_server = WSGIServer(('0.0.0.0', 8080), app)
+# http_server.serve_forever()
 
-# app.run(host='0.0.0.0', port=8080)
+app.run(host='0.0.0.0', port=8080)
