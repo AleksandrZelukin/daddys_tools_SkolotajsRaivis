@@ -20,13 +20,7 @@ def register():
         newUserSql = ''' INSERT INTO Users(ID,Username,Password,First_name,Last_name,E_mail, Phone, Address, Admin)
                     VALUES(?,?,?,?,?,?,?,?,?) '''
         try:
-            cur.execute(newUserSql, (
-                        str(uuid4()),
-                        username, 
-                        generate_password_hash(password), 
-                        first_name, 
-                        last_name, 
-                        e_mail, 
+            cur.execute(newUserSql, (str(uuid4()), username, generate_password_hash(password), first_name, last_name, e_mail, 
                         phone,
                         address,
                         "0"
